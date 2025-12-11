@@ -1,0 +1,63 @@
+<?php
+
+namespace App\Http\Requests;
+
+use App\Employee;
+use Gate;
+use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Response;
+
+class StoreEmployeeRequest extends FormRequest
+{
+    public function authorize()
+    {
+        return Gate::allows('employee_create');
+    }
+
+    public function rules()
+    {
+        return [
+            'matricule' => [
+                'required',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+                'unique:employees,matricule',
+            ],
+            'nni' => [
+                'required',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+                'unique:employees,nni',
+            ],
+            'name' => [
+                'string',
+                'required',
+            ],
+            'phone' => [
+                'nullable',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+            ],
+            'salary' => [
+                'required',
+                'integer',
+                'min:-2147483648',
+                'max:2147483647',
+            ],
+            'photo' => [
+                'required',
+            ],
+            'recruitement_date' => [
+                'required',
+                'date_format:' . config('panel.date_format'),
+            ],
+            'emploi_id' => [
+                'required',
+                'integer',
+            ],
+        ];
+    }
+}
