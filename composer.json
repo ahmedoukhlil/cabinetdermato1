@@ -17,6 +17,7 @@
         "laravel/passport": "^13.0",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.0",
+        "laraveldaily/laravel-charts": "^0.2.3",
         "spatie/laravel-medialibrary": "^11.0",
         "yajra/laravel-datatables-oracle": "^11.0"
     },
