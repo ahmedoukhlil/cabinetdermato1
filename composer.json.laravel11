@@ -9,11 +9,12 @@
     "license": "MIT",
     "require": {
         "php": "^8.2",
-        "bugsnag/bugsnag-laravel": "^2.29",
-        "carlos-meneses/laravel-mpdf": "^2.1",
+        "bugsnag/bugsnag-laravel": "^3.0",
+        "carlos-meneses/laravel-mpdf": "^3.0",
         "doctrine/dbal": "^3.0",
+        "fruitcake/laravel-cors": "^3.0",
         "guzzlehttp/guzzle": "^7.8",
-        "laravel/framework": "^11.35",
+        "laravel/framework": "^11.0",
         "laravel/passport": "^13.0",
         "laravel/tinker": "^2.9",
         "laravel/ui": "^4.0",
@@ -23,15 +24,11 @@
     "require-dev": {
         "fakerphp/faker": "^1.23",
         "laravel/pint": "^1.13",
+        "laravel/sail": "^1.26",
         "mockery/mockery": "^1.6",
         "nunomaduro/collision": "^8.0",
         "phpunit/phpunit": "^11.0",
         "spatie/laravel-ignition": "^2.4"
-    },
-    "extra": {
-        "laravel": {
-            "dont-discover": []
-        }
     },
     "autoload": {
         "psr-4": {
@@ -45,8 +42,26 @@
             "Tests\\": "tests/"
         }
     },
-    "minimum-stability": "stable",
-    "prefer-stable": true,
+    "scripts": {
+        "post-autoload-dump": [
+            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
+            "@php artisan package:discover --ansi"
+        ],
+        "post-update-cmd": [
+            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
+        ],
+        "post-root-package-install": [
+            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
+        ],
+        "post-create-project-cmd": [
+            "@php artisan key:generate --ansi"
+        ]
+    },
+    "extra": {
+        "laravel": {
+            "dont-discover": []
+        }
+    },
     "config": {
         "optimize-autoloader": true,
         "preferred-install": "dist",
@@ -56,19 +71,7 @@
             "php-http/discovery": true
         }
     },
-    "scripts": {
-        "post-autoload-dump": [
-            "Illuminate\\Foundation\\ComposerScripts::postAutoloadDump",
-            "@php artisan package:discover --ansi"
-        ],
-        "post-root-package-install": [
-            "@php -r \"file_exists('.env') || copy('.env.example', '.env');\""
-        ],
-        "post-create-project-cmd": [
-            "@php artisan key:generate --ansi"
-        ],
-        "post-update-cmd": [
-            "@php artisan vendor:publish --tag=laravel-assets --ansi --force"
-        ]
-    }
+    "minimum-stability": "stable",
+    "prefer-stable": true
 }
+

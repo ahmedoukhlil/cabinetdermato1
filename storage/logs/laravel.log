@@ -659,3 +659,27 @@ Stack trace:
 #51 C:\\wamp64\\www\\Code\\server.php(21): require_once('C:\\\\wamp64\\\\www\\\\C...')
 #52 {main}
 "} 
+[2025-12-11 22:52:53] local.ERROR: Class "Meneses\LaravelMpdf\LaravelMpdfServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Meneses\\LaravelMpdf\\LaravelMpdfServiceProvider\" not found at C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:206)
+[stacktrace]
+#0 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(142): Illuminate\\Foundation\\ProviderRepository->createProvider('Meneses\\\\Laravel...')
+#1 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(871): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(37): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(342): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 C:\\wamp64\\www\\Code\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
+[2025-12-11 22:53:05] local.ERROR: Class "Meneses\LaravelMpdf\LaravelMpdfServiceProvider" not found {"exception":"[object] (Error(code: 0): Class \"Meneses\\LaravelMpdf\\LaravelMpdfServiceProvider\" not found at C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php:206)
+[stacktrace]
+#0 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(142): Illuminate\\Foundation\\ProviderRepository->createProvider('Meneses\\\\Laravel...')
+#1 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\ProviderRepository.php(61): Illuminate\\Foundation\\ProviderRepository->compileManifest(Array)
+#2 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(871): Illuminate\\Foundation\\ProviderRepository->load(Array)
+#3 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\RegisterProviders.php(37): Illuminate\\Foundation\\Application->registerConfiguredProviders()
+#4 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(342): Illuminate\\Foundation\\Bootstrap\\RegisterProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#5 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(474): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#6 C:\\wamp64\\www\\Code\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(196): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#7 C:\\wamp64\\www\\Code\\artisan(35): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#8 {main}
+"} 
